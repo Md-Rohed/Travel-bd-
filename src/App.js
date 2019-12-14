@@ -7,6 +7,7 @@ import Tour from "./components/Tour";
 import Login from "./components/Login";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
+import CreateBlogs from "./components/CreateBlogs";
 import Registration from "./components/Registration";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Login path="login"/>
            <Registration  path="reg"/> 
            <Blogs  path="my-blogs"/> 
+           <CreateBlogs  path="create-blogs"/> 
            
         </Router>
       </div>

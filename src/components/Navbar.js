@@ -68,6 +68,9 @@ class NavbarMain extends React.Component {
                 <NavItem>
                   <NavLink href="/my-blogs">Blogs</NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink href="/create-blogs">Create Blogs</NavLink>
+                </NavItem>
                 <Button color="success" onClick={this.handleLogin}>
                   {isLoggedIn ? "Logout" : "Login"}
                 </Button>{" "}
