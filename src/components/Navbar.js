@@ -10,23 +10,35 @@ import {
   Container,
   Button
 } from "reactstrap";
+import { navigate } from "@reach/router";
+import store from "store";
 import "../App.css";
 
 class NavbarMain extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    isOpen: false,
+    loggedIn: true
+  };
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  handleLogin = () => {
+    const { isLoggedIn } = store.get("user");
+    if (isLoggedIn) {
+      this.setState({ loggedIn: false });
+      store.set("user", { isLoggedIn: false });
+    } else {
+      navigate("/login");
+    }
+  };
+
   render() {
+    const { isLoggedIn } = store.get("user");
+    console.log("isLoggedIn", isLoggedIn)
     return (
       <div>
         <Navbar
@@ -37,7 +49,7 @@ class NavbarMain extends React.Component {
           className="navDark"
         >
           <Container>
-            <NavbarBrand href="#">Manila Tourism</NavbarBrand>
+            <NavbarBrand href="/">Manila Tourism</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
@@ -53,7 +65,12 @@ class NavbarMain extends React.Component {
                 <NavItem>
                   <NavLink href="#">Contact</NavLink>
                 </NavItem>
-                <Button color="success">Login</Button>{" "}
+                <NavItem>
+                  <NavLink href="/my-blogs">Blogs</NavLink>
+                </NavItem>
+                <Button color="success" onClick={this.handleLogin}>
+                  {isLoggedIn ? "Logout" : "Login"}
+                </Button>{" "}
               </Nav>
             </Collapse>
           </Container>

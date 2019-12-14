@@ -4,6 +4,10 @@ import { Router, Link } from "@reach/router";
 import NavbarMain from "./components/Navbar";
 import Home from "./components/Home";
 import Tour from "./components/Tour";
+import Login from "./components/Login";
+import About from "./components/About";
+import Blogs from "./components/Blogs";
+import Registration from "./components/Registration";
 
 class App extends Component {
   render() {
@@ -12,7 +16,11 @@ class App extends Component {
         <NavbarMain />
         <Router>
           <Home path="/" />
-          <Tour path="tour" />
+          <Tour path="tour/:id"/>
+          <Login path="login"/>
+           <Registration  path="reg"/> 
+           <Blogs  path="my-blogs"/> 
+           
         </Router>
       </div>
     );

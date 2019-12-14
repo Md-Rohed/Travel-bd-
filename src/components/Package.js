@@ -18,8 +18,10 @@ const tours = [
     category: ["resort", "honeymoon"],
     img: imgCard1,
     alt: "blah blah",
-    title: "Seaside Resort",
-    subtitle: "Batangas Resort"
+    title: "Saint-martin",
+    route: "saint-martin",
+    subtitle: "Beach",
+    info:"dsfdfdsfsdf"
     
   },
   {
@@ -27,48 +29,55 @@ const tours = [
     category: ["beach", "mountain"],
     img: imgCard2,
     alt: "blah blah",
-    title: "Isla de Gigantes",
-    subtitle: "Carles, Iloilo"
+    title: "Sajek",
+    route: "sajek",
+    subtitle: "king of cloud",
+    info:"fdsfsdfdsfsd"
   },
   {
     id: 3,
     category: ["resort", "honeymoon"],
     img: imgCard3,
     alt: "blah blah",
-    title: "The Farm",
-    subtitle: "San Benito, Batangas"
+    title: "Sunamganj",
+    subtitle: "King of River",
+    info: "fsdfdsfsfsghh"
   },
   {
     id: 4,
     category: ["climbing", "mountain"],
     img: imgCard4,
     alt: "blah blah",
-    title: "Poog",
-    subtitle: "Cebu"
+    title: "Nilgiri",
+    subtitle: "King of Hill",
+    info:"fdsfsdfewq"
   },
   {
     id: 5,
     category: ["resort", "honeymoon", "beach"],
     img: imgCard5,
     alt: "blah blah",
-    title: "Koro Sun Resort & Rainforest Spa",
-    subtitle: "Vanua Levu, Fiji"
+    title: "AMIYAKHUM",
+    subtitle: "waterfall",
+    info:"fdsfsdfqwq"
   },
   {
     id: 6,
     category: ["climbing", "mountain"],
     img: imgCard6,
     alt: "blah blah",
-    title: "Pi Shan",
-    subtitle: "Yangshuo China"
+    title: "Sundaraban",
+    subtitle: "FOREST",
+    info: "saqfgergter"
   },
   {
     id: 7,
     category: ["beach", "climbing"],
     img: imgCard7,
     alt: "blah blah",
-    title: "El-Nido",
-    subtitle: "Palawan"
+    title: "khoiyachora",
+    subtitle: "waterfall",
+    info :"fsdfdsfsd"
     
   },
   {
@@ -76,24 +85,27 @@ const tours = [
     category: ["honeymoon", "beach", "resort"],
     img: imgCard8,
     alt: "blah blah",
-    title: "Shangri-La’s Boracay Resort and Spa",
-    subtitle: "Boracay Resort"
+    title: "Chandranath hill",
+    subtitle: "Danger area",
+    info : "iojsfq"
   },
   {
     id: 9,
     category: ["beach", "resort"],
     img: imgCard9,
     alt: "blah blah",
-    title: "HUMANA Island Resort & Spa",
-    subtitle: "Palawan"
+    title: "Cox's Bazar",
+    subtitle: "Largest sea-beach",
+    info: "dsadsadq"
   },
   {
     id: 10,
     category: ["camping", "beach"],
     img: imgBarobaybay,
     alt: "camping in the lake",
-    title: "Barobaybay Camp Site",
-    subtitle: "Barobaybay, Lavezares N. Samar"
+    title: "Bogalake Camp Site",
+    subtitle: "Bandarban",
+    info : "dada"
   }
 ];
 
