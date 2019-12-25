@@ -74,6 +74,8 @@ class NavbarMain extends React.Component {
                 <Button color="success" onClick={this.handleLogin}>
                   {isLoggedIn ? "Logout" : "Login"}
                 </Button>{" "}
+                  {isLoggedIn ? "" : <NavLink href="/reg">Register</NavLink>}
+                {" "}
               </Nav>
             </Collapse>
           </Container>

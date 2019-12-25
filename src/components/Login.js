@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { navigate } from "@reach/router"
+import { navigate } from "@reach/router";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./login/login.css";
-import axios from "axios"
-import store from "store"
+import axios from "axios";
+import store from "store";
 
 const Login = props => {
   const [email, setEmail] = useState("");
@@ -16,18 +16,21 @@ const Login = props => {
   async function handleSubmit(event) {
     let resp;
     event.preventDefault();
-    try{
-      resp = await axios.post("http://localhost:8000/api/auth",{email,password})
-    } catch(error){
-      console.log(error);
-      alert("could not login")
-    }
+    try {
+      resp = await axios.post("http://localhost:8000/api/auth", {
+        email,
+        password
+      });
+      const { response, success } = resp.data;
 
-    const {response, success} = resp.data
-    if(success){
-      response.isLoggedIn = true
-      store.set('user', response)
-      navigate("/")
+      if (success) {
+        response.isLoggedIn = true;
+        store.set("user", response);
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("could not login");
     }
   }
 

@@ -21,8 +21,7 @@ class App extends Component {
           <Login path="login"/>
            <Registration  path="reg"/> 
            <Blogs  path="my-blogs"/> 
-           <CreateBlogs  path="create-blogs"/> 
-           
+           <CreateBlogs  path="create-blogs"/>
         </Router>
       </div>
     );
